@@ -1,0 +1,26 @@
+{% extends "tim/index.html" %}
+
+{% block content %}
+
+<div class="container my-5 text-center">
+    <div class="row">
+      <div class="col align-self-start ">
+        </div>
+            <div class="col align-self-center">
+                <div class="bg-primary p-3 text-dark bg-opacity-25 border border-white rounded-4">
+                    <form action="{% url 'users:register' %}" method='POST'>
+                        {% csrf_token %}
+                        <strong>{{form.as_p}}</strong>
+                          <button class="btn btn-outline-primary border border-2"><strong>Register</strong></button>
+                          <input type="hidden" name="next" 
+                         value="{% url 'users:login' %}" />
+                    </form>
+                </div>
+            </div>
+        <div class="col align-self-end">
+      </div>
+    </div>
+</div>
+
+ 
+{% endblock content %}
