@@ -20,9 +20,9 @@
                 Department
               </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="{% url 'tim:dept1' %}">Department 1</a></li>
-                    <li><a class="dropdown-item" href="{% url 'tim:dept2' %}">Department 2</a></li>
-                  <li><a class="dropdown-item" href="{% url 'tim:dept3' %}">Department 3</a></li>
+                  <li><a class="dropdown-item" href="{% url 'tim:dept_activate' %}">login</a></li>
+                  <li><a class="dropdown-item" href="{% url 'tim:out' user.id %}">logout</a></li>
+                  
                 </ul>
             </li>
           </ul>
